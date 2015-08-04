@@ -1,6 +1,6 @@
 {
   "name": "swagger-aurelia-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Aurelia swagger client http service for communicating with swagger endpoints.",
   "main": "config.js",
   "scripts": {
