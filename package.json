@@ -1,6 +1,6 @@
 {
   "name": "aurelia-swagger-client",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Aurelia swagger client http service for communicating with swagger endpoints.",
   "main": "config.js",
   "scripts": {
@@ -33,8 +33,8 @@
   },
   "jspm": {
     "directories": {
-       "lib": "dist/system"
-      },
+      "lib": "dist/system"
+    },
     "dependencies": {
       "aurelia-framework": "github:aurelia/framework@^0.13.4",
       "aurelia-http-client": "github:aurelia/http-client@^0.10.2",
