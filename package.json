@@ -1,0 +1,24 @@
+{
+  "name": "swagger-aurelia-client",
+  "version": "0.1.0",
+  "description": "Aurelia swagger client http service for communicating with swagger endpoints.",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "paul van bladel",
+  "license": "MIT",
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "aurelia-framework": "github:aurelia/framework@^0.13.4",
+      "aurelia-http-client": "github:aurelia/http-client@^0.10.2",
+      "signalfx/swagger-client-generator": "github:signalfx/swagger-client-generator@^0.2.13"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
+  }
+}
