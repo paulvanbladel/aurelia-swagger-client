@@ -1,7 +1,7 @@
 System.register(['signalfx/swagger-client-generator', 'aurelia-http-client', 'aurelia-framework'], function (_export) {
     'use strict';
 
-    var SwaggerAureliaHttpClientGenerator, HttpClient, Headers, HttpRequestMessage, inject, SwaggerAureliaClient;
+    var SwaggerClientGenerator, HttpClient, Headers, HttpRequestMessage, inject, SwaggerAureliaHttpClientGenerator;
 
     var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -9,7 +9,7 @@ System.register(['signalfx/swagger-client-generator', 'aurelia-http-client', 'au
 
     return {
         setters: [function (_signalfxSwaggerClientGenerator) {
-            SwaggerAureliaHttpClientGenerator = _signalfxSwaggerClientGenerator;
+            SwaggerClientGenerator = _signalfxSwaggerClientGenerator;
         }, function (_aureliaHttpClient) {
             HttpClient = _aureliaHttpClient.HttpClient;
             Headers = _aureliaHttpClient.Headers;
@@ -18,14 +18,14 @@ System.register(['signalfx/swagger-client-generator', 'aurelia-http-client', 'au
             inject = _aureliaFramework.inject;
         }],
         execute: function () {
-            SwaggerAureliaClient = (function () {
-                function SwaggerAureliaClient(http) {
-                    _classCallCheck(this, _SwaggerAureliaClient);
+            SwaggerAureliaHttpClientGenerator = (function () {
+                function SwaggerAureliaHttpClientGenerator(http) {
+                    _classCallCheck(this, _SwaggerAureliaHttpClientGenerator);
 
                     this.http = http;
                 }
 
-                _createClass(SwaggerAureliaClient, [{
+                _createClass(SwaggerAureliaHttpClientGenerator, [{
                     key: 'create',
                     value: function create(schema) {
                         var _this = this;
@@ -40,12 +40,12 @@ System.register(['signalfx/swagger-client-generator', 'aurelia-http-client', 'au
                     }
                 }]);
 
-                var _SwaggerAureliaClient = SwaggerAureliaClient;
-                SwaggerAureliaClient = inject(HttpClient)(SwaggerAureliaClient) || SwaggerAureliaClient;
-                return SwaggerAureliaClient;
+                var _SwaggerAureliaHttpClientGenerator = SwaggerAureliaHttpClientGenerator;
+                SwaggerAureliaHttpClientGenerator = inject(HttpClient)(SwaggerAureliaHttpClientGenerator) || SwaggerAureliaHttpClientGenerator;
+                return SwaggerAureliaHttpClientGenerator;
             })();
 
-            _export('SwaggerAureliaClient', SwaggerAureliaClient);
+            _export('SwaggerAureliaHttpClientGenerator', SwaggerAureliaHttpClientGenerator);
         }
     };
 });

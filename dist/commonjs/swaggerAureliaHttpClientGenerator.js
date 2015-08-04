@@ -12,20 +12,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var _signalfxSwaggerClientGenerator = require('signalfx/swagger-client-generator');
 
-var SwaggerAureliaHttpClientGenerator = _interopRequireWildcard(_signalfxSwaggerClientGenerator);
+var SwaggerClientGenerator = _interopRequireWildcard(_signalfxSwaggerClientGenerator);
 
 var _aureliaHttpClient = require('aurelia-http-client');
 
 var _aureliaFramework = require('aurelia-framework');
 
-var SwaggerAureliaClient = (function () {
-    function SwaggerAureliaClient(http) {
-        _classCallCheck(this, _SwaggerAureliaClient);
+var SwaggerAureliaHttpClientGenerator = (function () {
+    function SwaggerAureliaHttpClientGenerator(http) {
+        _classCallCheck(this, _SwaggerAureliaHttpClientGenerator);
 
         this.http = http;
     }
 
-    _createClass(SwaggerAureliaClient, [{
+    _createClass(SwaggerAureliaHttpClientGenerator, [{
         key: 'create',
         value: function create(schema) {
             var _this = this;
@@ -40,9 +40,9 @@ var SwaggerAureliaClient = (function () {
         }
     }]);
 
-    var _SwaggerAureliaClient = SwaggerAureliaClient;
-    SwaggerAureliaClient = (0, _aureliaFramework.inject)(_aureliaHttpClient.HttpClient)(SwaggerAureliaClient) || SwaggerAureliaClient;
-    return SwaggerAureliaClient;
+    var _SwaggerAureliaHttpClientGenerator = SwaggerAureliaHttpClientGenerator;
+    SwaggerAureliaHttpClientGenerator = (0, _aureliaFramework.inject)(_aureliaHttpClient.HttpClient)(SwaggerAureliaHttpClientGenerator) || SwaggerAureliaHttpClientGenerator;
+    return SwaggerAureliaHttpClientGenerator;
 })();
 
-exports.SwaggerAureliaClient = SwaggerAureliaClient;
+exports.SwaggerAureliaHttpClientGenerator = SwaggerAureliaHttpClientGenerator;

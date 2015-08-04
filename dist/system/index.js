@@ -1,4 +1,4 @@
-System.register([], function (_export) {
+System.register(['./swaggerAureliaHttpClientGenerator'], function (_export) {
   'use strict';
 
   _export('configure', configure);
@@ -10,7 +10,9 @@ System.register([], function (_export) {
   }
 
   return {
-    setters: [],
+    setters: [function (_swaggerAureliaHttpClientGenerator) {
+      _export('SwaggerAureliaHttpClientGenerator', _swaggerAureliaHttpClientGenerator.SwaggerAureliaHttpClientGenerator);
+    }],
     execute: function () {}
   };
 });

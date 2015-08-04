@@ -1,11 +1,20 @@
 {
   "name": "aurelia-swagger-client",
-  "version": "0.1.4",
+  "version": "0.1.12",
   "description": "Aurelia swagger client http service for communicating with swagger endpoints.",
-  "main": "config.js",
+  "main": "dist/system.index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulvanbladel/aurelia-swagger-client.git"
+  },
+  "keywords": [
+    "aurelia",
+    "swagger",
+    "api"
+  ],
   "author": "paul van bladel",
   "license": "MIT",
   "devDependencies": {

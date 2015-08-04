@@ -1,8 +1,8 @@
-import * as SwaggerAureliaHttpClientGenerator from 'signalfx/swagger-client-generator';
+import * as SwaggerClientGenerator from 'signalfx/swagger-client-generator';
 import {HttpClient, Headers, HttpRequestMessage} from 'aurelia-http-client';
 import {inject} from 'aurelia-framework';
 @inject(HttpClient)
-export class SwaggerAureliaClient {
+export class SwaggerAureliaHttpClientGenerator {
     constructor(http) {
         this.http = http;
     }

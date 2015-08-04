@@ -9,19 +9,19 @@ define(['exports', 'signalfx/swagger-client-generator', 'aurelia-http-client', '
 
     function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-    var SwaggerAureliaClient = (function () {
-        function SwaggerAureliaClient(http) {
-            _classCallCheck(this, _SwaggerAureliaClient);
+    var SwaggerAureliaHttpClientGenerator = (function () {
+        function SwaggerAureliaHttpClientGenerator(http) {
+            _classCallCheck(this, _SwaggerAureliaHttpClientGenerator);
 
             this.http = http;
         }
 
-        _createClass(SwaggerAureliaClient, [{
+        _createClass(SwaggerAureliaHttpClientGenerator, [{
             key: 'create',
             value: function create(schema) {
                 var _this = this;
 
-                return SwaggerClientGenerator['default'](schema, function (error, request) {
+                return _signalfxSwaggerClientGenerator['default'](schema, function (error, request) {
                     var headers = new _aureliaHttpClient.Headers(request.headers);
                     var requestMessage = new _aureliaHttpClient.HttpRequestMessage(request.method, request.url, request.body, headers);
                     return _this.http.send(requestMessage).then(function (response) {
@@ -31,10 +31,10 @@ define(['exports', 'signalfx/swagger-client-generator', 'aurelia-http-client', '
             }
         }]);
 
-        var _SwaggerAureliaClient = SwaggerAureliaClient;
-        SwaggerAureliaClient = (0, _aureliaFramework.inject)(_aureliaHttpClient.HttpClient)(SwaggerAureliaClient) || SwaggerAureliaClient;
-        return SwaggerAureliaClient;
+        var _SwaggerAureliaHttpClientGenerator = SwaggerAureliaHttpClientGenerator;
+        SwaggerAureliaHttpClientGenerator = (0, _aureliaFramework.inject)(_aureliaHttpClient.HttpClient)(SwaggerAureliaHttpClientGenerator) || SwaggerAureliaHttpClientGenerator;
+        return SwaggerAureliaHttpClientGenerator;
     })();
 
-    exports.SwaggerAureliaClient = SwaggerAureliaClient;
+    exports.SwaggerAureliaHttpClientGenerator = SwaggerAureliaHttpClientGenerator;
 });
